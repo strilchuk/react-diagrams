@@ -27,11 +27,14 @@ node1.setPosition(50, 50);
 const node2 = new TSCustomNodeModel({ color: 'rgb(0,192,255)' });
 node2.setPosition(200, 50);
 
+const node3 = new TSCustomNodeModel({ color: 'rgb(0,192,255)' });
+node3.setPosition(300, 50);
+
 const link1 = new DefaultLinkModel();
 link1.setSourcePort(node1.getPort('out'));
 link1.setTargetPort(node2.getPort('in'));
 
-model.addAll(node1, node2, link1);
+model.addAll(node1, node2, link1, node3);
 
 //####################################################
 
